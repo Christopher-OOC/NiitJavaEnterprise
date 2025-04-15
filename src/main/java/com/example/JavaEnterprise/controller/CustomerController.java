@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value = "/java-enterprise")
 public class CustomerController {
 
-    @GetMapping(value = "/")
+    @GetMapping
     public String homePage() {
 
         return "home";
     }
 
+    @GetMapping(value = "/products")
+    public String showAllProdcuts() {
 
+        return "products";
+    }
 }
